@@ -21,9 +21,6 @@
                             <rect key="frame" x="0.0" y="220" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Reset"/>
-                            <connections>
-                                <action selector="resetAction:" destination="cfK-7K-gnI" eventType="touchUpInside" id="itY-yr-Hjk"/>
-                            </connections>
                         </button>
                         <sections>
                             <tableViewSection id="r3G-SB-LRz">
@@ -32,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lkz-d5-ZiT" id="Tj7-lS-LJh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FirstName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Dw-1p-Yhx">
@@ -47,9 +44,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     <connections>
-                                                        <action selector="textFieldAction:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="I0U-nu-VYn"/>
+                                                        <action selector="actionNameChaged:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="nkf-ep-gJE"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -59,7 +56,7 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uUi-kU-2kC" id="Ugh-S6-g12">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LastName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZm-op-nXd">
@@ -74,9 +71,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     <connections>
-                                                        <action selector="textFieldAction:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="ATP-Pc-9oa"/>
+                                                        <action selector="actionLastnameChaged:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="sJf-GH-MU0"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -86,7 +83,7 @@
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1da-CM-49b" id="Xd8-qS-IVh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of berth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8V-Rr-ulI">
@@ -101,9 +98,10 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
-                                                        <action selector="textFieldAction:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="gkA-OH-VIZ"/>
+                                                        <action selector="actionBirthDateChanged:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="ZjK-u5-SWS"/>
+                                                        <action selector="actionLastnameChaged:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="bea-z4-4Rq"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -113,7 +111,7 @@
                                         <rect key="frame" x="0.0" y="132" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rv0-90-sWS" id="v0a-7W-WCc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33V-AK-fxq">
@@ -131,7 +129,7 @@
                                                         <segment title="Female"/>
                                                     </segments>
                                                     <connections>
-                                                        <action selector="genderAction:" destination="cfK-7K-gnI" eventType="valueChanged" id="eIK-oc-ybe"/>
+                                                        <action selector="actionGenderChanged:" destination="cfK-7K-gnI" eventType="valueChanged" id="FFq-eB-vxI"/>
                                                     </connections>
                                                 </segmentedControl>
                                             </subviews>
@@ -141,7 +139,7 @@
                                         <rect key="frame" x="0.0" y="176" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7fa-Jb-Nhg" id="dCA-dW-Vm8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRT-sA-n0I">
@@ -156,9 +154,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
-                                                        <action selector="textFieldAction:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="iMu-yf-01Y"/>
+                                                        <action selector="actionCradeChanged:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="mtC-aE-RbU"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -174,12 +172,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="bj2-ka-X6L"/>
                     <connections>
-                        <outlet property="genderControl" destination="rDo-lN-JOB" id="ZHQ-9V-06I"/>
-                        <outlet property="resetAction" destination="TP8-4K-9oL" id="8l9-jj-AYe"/>
-                        <outletCollection property="regTextField" destination="Ke8-6A-NR6" id="Zth-lh-UyB"/>
-                        <outletCollection property="regTextField" destination="DKL-Ru-aiH" id="Pys-Ly-174"/>
-                        <outletCollection property="regTextField" destination="HB4-u6-ekX" id="xai-3r-FuC"/>
-                        <outletCollection property="regTextField" destination="Ooe-cn-eRp" id="fjK-px-rVp"/>
+                        <outlet property="birthDateField" destination="HB4-u6-ekX" id="DDU-oK-Xdz"/>
+                        <outlet property="genderSegment" destination="rDo-lN-JOB" id="nxy-uc-jAy"/>
+                        <outlet property="gradeField" destination="Ooe-cn-eRp" id="bC4-ey-Nrd"/>
+                        <outlet property="lastnameField" destination="DKL-Ru-aiH" id="KjU-2c-nOO"/>
+                        <outlet property="nameField" destination="Ke8-6A-NR6" id="4Cr-5A-JlV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEW-iF-AqX" userLabel="First Responder" sceneMemberID="firstResponder"/>

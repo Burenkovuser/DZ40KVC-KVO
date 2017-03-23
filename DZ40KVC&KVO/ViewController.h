@@ -7,16 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Student.h"
 
 @interface ViewController : UITableViewController<UITextFieldDelegate>
 
-@property(strong, nonatomic) IBOutletCollection(UITextField) NSArray *regTextField;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *genderControl;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *lastnameField;
+@property (weak, nonatomic) IBOutlet UITextField *birthDateField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegment;
+@property (weak, nonatomic) IBOutlet UITextField *gradeField;
 
-- (IBAction)textFieldAction:(UITextField *)sender;
-- (IBAction)genderAction:(UISegmentedControl *)sender;
-- (IBAction)resetAction:(UIButton *)sender;
 
+- (IBAction)actionNameChaged:(UITextField *)sender;
+- (IBAction)actionLastnameChaged:(UITextField *)sender;
+- (IBAction)actionBirthDateChanged:(UITextField *)sender;
+- (IBAction)actionCradeChanged:(UITextField *)sender;
+
+- (IBAction)actionGenderChanged:(UISegmentedControl *)sender;
 
 
 
