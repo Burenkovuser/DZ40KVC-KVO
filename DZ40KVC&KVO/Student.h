@@ -18,5 +18,6 @@
 
 
 -(instancetype) inintWithInfo;
+-(void) clearInfo;
 
 @end

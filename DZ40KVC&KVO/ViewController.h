@@ -25,6 +25,7 @@
 
 - (IBAction)actionGenderChanged:(UISegmentedControl *)sender;
 
+- (IBAction)actionClearInfo:(UIButton *)sender;
 
 
 @end

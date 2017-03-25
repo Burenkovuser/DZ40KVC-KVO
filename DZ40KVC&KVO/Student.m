@@ -23,29 +23,32 @@
         _dateOfBirth = [dateFormater stringFromDate:[NSDate date]];
         _gender = 0;
         _grade = 0;
-        
     }
-    
     return self;
 }
 
--(void) setFirstName:(NSString *)firstName {
-    _firstName = firstName;
-    NSLog(@"Started new name: %@", firstName);
-}
-
--(void) setLastName:(NSString *)lastName {
-    _lastName = lastName;
-    NSLog(@"Started new lastName: %@", lastName);
-}
-
--(void) setGender:(NSInteger *)gender {
-    _gender = gender;
-    NSLog(@"Started new gender: %ld", gender);
-}
--(void) setGrade:(NSInteger *)grade {
-    _grade = grade;
-    NSLog(@"Started new grade: %ld", grade);
+-(void) clearInfo {
+    
+    [self willChangeValueForKey:@"firstName"];
+    _firstName = @"";
+    [self didChangeValueForKey:@"firstName"];
+    
+    [self willChangeValueForKey:@"lastName"];
+    _firstName = @"";
+    [self didChangeValueForKey:@"lastName"];
+    
+    [self willChangeValueForKey:@"dateOfBirth"];
+    _firstName = @"";
+    [self didChangeValueForKey:@"dateOfBirth"];
+    
+    [self willChangeValueForKey:@"gender"];
+    _firstName = @"";
+    [self didChangeValueForKey:@"gender"];
+    
+    [self willChangeValueForKey:@"grade"];
+    _firstName = @"";
+    [self didChangeValueForKey:@"grade"];
+    
 }
 
 @end

@@ -21,6 +21,9 @@
                             <rect key="frame" x="0.0" y="220" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Reset"/>
+                            <connections>
+                                <action selector="actionClearInfo:" destination="cfK-7K-gnI" eventType="touchUpInside" id="XkH-rc-Kvw"/>
+                            </connections>
                         </button>
                         <sections>
                             <tableViewSection id="r3G-SB-LRz">
@@ -47,6 +50,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     <connections>
                                                         <action selector="actionNameChaged:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="nkf-ep-gJE"/>
+                                                        <outlet property="delegate" destination="cfK-7K-gnI" id="K5m-3P-iSw"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -74,6 +78,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     <connections>
                                                         <action selector="actionLastnameChaged:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="sJf-GH-MU0"/>
+                                                        <outlet property="delegate" destination="cfK-7K-gnI" id="57X-2C-Vix"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -102,6 +107,7 @@
                                                     <connections>
                                                         <action selector="actionBirthDateChanged:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="ZjK-u5-SWS"/>
                                                         <action selector="actionLastnameChaged:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="bea-z4-4Rq"/>
+                                                        <outlet property="delegate" destination="cfK-7K-gnI" id="kdC-Ae-n8V"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -157,6 +163,7 @@
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
                                                         <action selector="actionCradeChanged:" destination="cfK-7K-gnI" eventType="editingDidEnd" id="mtC-aE-RbU"/>
+                                                        <outlet property="delegate" destination="cfK-7K-gnI" id="8Tn-sS-9HJ"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
